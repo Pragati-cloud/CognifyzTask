@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+    <script>
+        function func3() {
+            const greetings = ["Good Morning", "Good Afternoon", "Good Evening"];
+            const currentHour = new Date().getHours();
+
+            let index = currentHour >= 12 && currentHour < 17 ? 1 : currentHour >= 17 ? 2 : 0;
+
+            alert(greetings[index]);
+        }
+        function func1() {
+            var fnum = document.getElementById("num1").value;
+            var snum = document.getElementById("num2").value;
+            var total = parseInt(fnum) + parseInt(snum);
+            document.getElementById("result").innerHTML= total;
+        }
+        function func2() {
+            const btn = document.querySelector('.btn2');
+            btn.addEventListener('click', () => {
+                btn.style.backgroundColor = '#EE82EEr';
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <style>
+        * {
+            padding: 10px;
+            margin: 0px;
+        }
+
+        .btn1,
+        .btn2,
+        .btn3 {
+            background-color: #800080;
+            border: none;
+            color: rgb(249, 187, 255);
+            padding: 12px 28px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            box-shadow:  0 4px 8px 0 rgb(224, 75, 216);
+        }
+
+        body {
+            background-image: url(https://img.freepik.com/free-vector/modern-wavy-gradient-wallpaper_79603-827.jpg
+);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1,h4,h2{
+            color: white;
+        }
+        h3{
+            color: white;
+        }
+    </style>
+
+    <h1>Addition of two numbers</h1>
+    <h4>Enter first number:</h4><input id="num1"><br/>
+    <h4>Enter second number:</h4><input id="num2"><br />
+    <h4>Result:</h4> <h2 id="result"></h2>
+    <button class="btn1" onclick="func1()"><h3>Calculate</h3></button>
+    <button class="btn2" onclick="func2()"><h3>Theme</h3></button>
+    <button class="btn3" onclick="func3()"><h3>Greeting</h3></button>
+
+</body>
+
+</html>
